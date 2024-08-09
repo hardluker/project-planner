@@ -5,7 +5,7 @@
       <div class="icons">
         <span class="material-icons"> edit </span>
         <span class="material-icons" @click="deleteProject"> delete </span>
-        <span class="material-icons"> done </span>
+        <span class="material-icons" @click="toggleComplete"> done </span>
       </div>
     </div>
     <div class="details" v-if="showDetails">
@@ -29,7 +29,18 @@ export default {
     },
     deleteProject() {
       fetch(this.uri, { method: 'DELETE' })
-        .then(() => this.$emit('delete', this.project.id))
+        .then(() => this.$emit('delete', this.project.id)) // Emitting a delete event to update local data
+        .catch((err) => console.log(err));
+    },
+    toggleComplete() {
+      fetch(this.uri, {
+        method: 'PATCH', // Method for just updating a part of something
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ complete: !this.project.complete })
+      })
+        .then(() => {
+          this.$emit('complete', this.project.id); // emitting complete event to update local data
+        })
         .catch((err) => console.log(err));
     }
   }
