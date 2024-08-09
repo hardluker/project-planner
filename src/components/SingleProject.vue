@@ -28,7 +28,9 @@ export default {
       this.showDetails = !this.showDetails;
     },
     deleteProject() {
-      fetch(this.uri, { method: 'DELETE' });
+      fetch(this.uri, { method: 'DELETE' }).then(() =>
+        this.$emit('delete', this.project.id).catch((err) => console.log(err))
+      );
     }
   }
 };
