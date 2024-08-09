@@ -36,10 +36,10 @@ export default {
       });
     },
     handleComplete(id) {
-      let p = this.projects.find((project) => {
+      let project = this.projects.find((project) => {
         return project.id === id;
       });
-      p.complete = !p.complete;
+      project.complete = !project.complete;
     }
   }
 };
