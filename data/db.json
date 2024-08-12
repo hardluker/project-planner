@@ -7,9 +7,27 @@
       "complete": false
     },
     {
-      "id": "4",
-      "title": "Make marketing email",
-      "details": "Lorem ipsum",
+      "id": "08da",
+      "title": "Make a new Website",
+      "details": "Blah Blah Blah",
+      "complete": false
+    },
+    {
+      "id": "a0ff",
+      "title": "Run a marathon",
+      "details": "Test Test Test",
+      "complete": true
+    },
+    {
+      "id": "789b",
+      "title": "Eat Pineapples",
+      "details": "Don't forget to chop up those suckers!",
+      "complete": true
+    },
+    {
+      "id": "9fb5",
+      "title": "Eat Pizza",
+      "details": "Bake it, slice it up, eat that shiz",
       "complete": false
     }
   ]
