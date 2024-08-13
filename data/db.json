@@ -10,13 +10,13 @@
       "id": "08da",
       "title": "Make a new Website",
       "details": "Blah Blah Blah",
-      "complete": false
+      "complete": true
     },
     {
       "id": "a0ff",
       "title": "Run a marathon",
       "details": "Do a full 5k",
-      "complete": true
+      "complete": false
     },
     {
       "id": "789b",
@@ -28,6 +28,18 @@
       "id": "fd93",
       "title": "Eat bananas",
       "details": "Yummy Yummy",
+      "complete": false
+    },
+    {
+      "id": "8c74",
+      "title": "Pineapples",
+      "details": "You gotta love em",
+      "complete": false
+    },
+    {
+      "id": "6df5",
+      "title": "Study the etymology of the word \"Pineapple\"",
+      "details": "Many useful resources out there to contribute such as the pineapple emporium. Or rather, pineapples r us is another excellent resource to consider.",
       "complete": false
     }
   ]
