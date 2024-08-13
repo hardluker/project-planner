@@ -29,6 +29,12 @@
       "title": "Eat Pizza",
       "details": "Bake it, slice it up, eat that shiz",
       "complete": false
+    },
+    {
+      "id": "b2af",
+      "title": "Tell Keith How cool he is",
+      "details": "Don't forget to smile and tell him he's an awesome friend. Also don't be a dick.",
+      "complete": false
     }
   ]
 }
