@@ -3,7 +3,7 @@
     {
       "id": "3",
       "title": "Make marketing email",
-      "details": "Lorem ipsum",
+      "details": "Hello",
       "complete": false
     },
     {
@@ -15,7 +15,7 @@
     {
       "id": "a0ff",
       "title": "Run a marathon",
-      "details": "Test Test Test",
+      "details": "Do a full 5k",
       "complete": true
     },
     {
@@ -25,15 +25,9 @@
       "complete": true
     },
     {
-      "id": "9fb5",
-      "title": "Eat Pizza",
-      "details": "Bake it, slice it up, eat that shiz",
-      "complete": false
-    },
-    {
-      "id": "b2af",
-      "title": "Tell Keith How cool he is",
-      "details": "Don't forget to smile and tell him he's an awesome friend. Also don't be a dick.",
+      "id": "fd93",
+      "title": "Eat bananas",
+      "details": "Yummy Yummy",
       "complete": false
     }
   ]

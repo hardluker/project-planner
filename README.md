@@ -2,6 +2,12 @@
 
 A simple tool for creating planned projects. Essentially this is a ToDo application.
 
+## Start the Json Server
+
+```
+json-server --watch data/db.json
+```
+
 ## Project setup
 
 ```
