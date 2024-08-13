@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <FilterNav @filterChange="filterChange" :current="current" />
+    <FilterNav @filterChange="current = $event" :current="current" />
     <div v-if="projects.length">
       <div v-for="project in filteredProjects" :key="project.id">
         <SingleProject
@@ -23,7 +23,6 @@ export default {
   data() {
     return {
       projects: [],
-      filteredProjects: [],
       current: 'all'
     };
   },
@@ -32,7 +31,6 @@ export default {
       .then((res) => res.json())
       .then((data) => {
         this.projects = data;
-        this.filteredProjects = this.projects;
       })
       .catch((err) => console.log(err.message));
   },
@@ -47,20 +45,16 @@ export default {
         return project.id === id;
       });
       project.complete = !project.complete;
-    },
-    filterChange(event) {
-      this.current = event;
-      if (event === 'completed') {
-        this.filteredProjects = this.projects.filter((project) => {
-          return project.complete;
-        });
-      } else if (event === 'ongoing') {
-        this.filteredProjects = this.projects.filter((project) => {
-          return !project.complete;
-        });
-      } else {
-        this.filteredProjects = this.projects;
+    }
+  },
+  computed: {
+    filteredProjects() {
+      if (this.current === 'completed') {
+        return this.projects.filter((project) => project.complete);
+      } else if (this.current === 'ongoing') {
+        return this.projects.filter((project) => !project.complete);
       }
+      return this.projects;
     }
   }
 };
